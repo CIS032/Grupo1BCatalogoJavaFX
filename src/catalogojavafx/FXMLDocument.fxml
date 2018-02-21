@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="catalogojavafx.FXMLDocumentController">
+    <children>
+      <Label layoutX="303.0" layoutY="14.0" text="CATALAGO UTILIZANDO JAVAFX" />
+      <Accordion layoutX="14.0" layoutY="39.0">
+        <panes>
+          <TitledPane animated="false" maxHeight="400.0" maxWidth="750.0" minHeight="400.0" minWidth="750.0" prefHeight="400.0" prefWidth="750.0" text="Login">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="750.0">
+                     <children>
+                        <Label layoutX="52.0" layoutY="103.0" text="Usuario" />
+                        <TextField fx:id="txtUser" layoutX="140.0" layoutY="99.0" />
+                        <Label layoutX="52.0" layoutY="146.0" text="Contraseña" />
+                        <PasswordField fx:id="pass" layoutX="140.0" layoutY="142.0" />
+                        <Button layoutX="195.0" layoutY="190.0" mnemonicParsing="false" onAction="#ingresar" text="Ingresar" />
+                        <Label layoutX="73.0" layoutY="46.0" text="Ingresar Datos de Usuario">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="87.0" layoutY="190.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+                        <AnchorPane fx:id="pane" layoutX="372.0" layoutY="20.0" prefHeight="341.0" prefWidth="364.0" visible="false">
+                           <children>
+                              <Label layoutX="135.0" layoutY="44.0" text="Ingresar Datos">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="64.0" layoutY="212.0" text="Confirmar" />
+                              <PasswordField fx:id="conf" layoutX="152.0" layoutY="208.0" />
+                              <TextField fx:id="txtNames" layoutX="151.0" layoutY="91.0" />
+                              <Label layoutX="63.0" layoutY="95.0" text="Nombres" />
+                              <Label layoutX="64.0" layoutY="134.0" text="Usuario" />
+                              <TextField fx:id="txtNewUser" layoutX="152.0" layoutY="130.0" />
+                              <Label layoutX="64.0" layoutY="174.0" text="Contraseña" />
+                              <PasswordField fx:id="passNew" layoutX="152.0" layoutY="170.0" />
+                              <Button layoutX="226.0" layoutY="258.0" mnemonicParsing="false" onAction="#registrar" text="Registrase" />
+                              <Button layoutX="104.0" layoutY="258.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" maxHeight="400.0" maxWidth="750.0" minHeight="400.0" minWidth="750.0" prefHeight="400.0" prefWidth="750.0" text="Slider">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Slider fx:id="red" layoutX="29.0" layoutY="103.0" max="200.0" minorTickCount="5" prefHeight="14.0" prefWidth="341.0" showTickLabels="true" showTickMarks="true" />
+                        <Slider fx:id="green" layoutX="29.0" layoutY="187.0" max="200.0" minorTickCount="5" prefHeight="14.0" prefWidth="341.0" showTickLabels="true" showTickMarks="true" />
+                        <Slider fx:id="blue" layoutX="29.0" layoutY="283.0" max="200.0" minorTickCount="5" prefHeight="14.0" prefWidth="341.0" showTickLabels="true" showTickMarks="true" />
+                        <Label layoutX="28.0" layoutY="49.0" text="Rojo">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="136.0" text="Verde">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="29.0" layoutY="225.0" text="Azul">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane fx:id="anPane" layoutX="398.0" layoutY="49.0" prefHeight="311.0" prefWidth="340.0" />
+                        <Button layoutX="250.0" layoutY="322.0" mnemonicParsing="false" onAction="#clicked" text="Cambiar" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" maxHeight="400.0" maxWidth="750.0" minHeight="400.0" minWidth="750.0" prefHeight="400.0" prefWidth="750.0" text="RadioButtom">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="750.0">
+                     <children>
+                        <RadioButton fx:id="accion" layoutX="32.0" layoutY="84.0" mnemonicParsing="false" text="Acción" />
+                        <RadioButton fx:id="ciencia" layoutX="32.0" layoutY="134.0" mnemonicParsing="false" text="Ciencia Ficción" />
+                        <RadioButton fx:id="fantasia" layoutX="32.0" layoutY="183.0" mnemonicParsing="false" text="Fantasia" />
+                        <RadioButton fx:id="terror" layoutX="182.0" layoutY="184.0" mnemonicParsing="false" text="Terror" />
+                        <RadioButton fx:id="drama" layoutX="182.0" layoutY="135.0" mnemonicParsing="false" text="Drama" />
+                        <RadioButton fx:id="comedia" layoutX="182.0" layoutY="85.0" mnemonicParsing="false" text="Comedia" />
+                        <Button layoutX="334.0" layoutY="335.0" mnemonicParsing="false" onAction="#aceptar" text="Aceptar" />
+                        <TextArea fx:id="txtArea" editable="false" layoutX="349.0" layoutY="58.0" prefHeight="250.0" prefWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                        <Accordion />
+                     </children></AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="85.0" maxHeight="400.0" maxWidth="750.0" minHeight="400.0" minWidth="750.0" prefHeight="400.0" prefWidth="750.0" text="RadioButtom">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="750.0">
+                     <children>
+                        <RadioButton fx:id="accion11" layoutX="32.0" layoutY="84.0" mnemonicParsing="false" text="Acción" />
+                        <RadioButton fx:id="ciencia11" layoutX="32.0" layoutY="134.0" mnemonicParsing="false" text="Ciencia Ficción" />
+                        <RadioButton fx:id="fantasia11" layoutX="32.0" layoutY="183.0" mnemonicParsing="false" text="Fantasia" />
+                        <RadioButton fx:id="terror11" layoutX="182.0" layoutY="184.0" mnemonicParsing="false" text="Terror" />
+                        <RadioButton fx:id="drama11" layoutX="182.0" layoutY="135.0" mnemonicParsing="false" text="Drama" />
+                        <RadioButton fx:id="comedia11" layoutX="182.0" layoutY="85.0" mnemonicParsing="false" text="Comedia" />
+                        <Button layoutX="334.0" layoutY="335.0" mnemonicParsing="false" onAction="#aceptar" text="Aceptar" />
+                        <TextArea fx:id="txtArea11" editable="false" layoutX="349.0" layoutY="58.0" prefHeight="250.0" prefWidth="200.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                        <Accordion />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="60.0" maxHeight="400.0" maxWidth="750.0" minHeight="400.0" minWidth="750.0" prefHeight="400.0" prefWidth="750.0" text="ToggleButtom">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="750.0">
+                     <children>
+                        <RadioButton fx:id="casa" layoutX="118.0" layoutY="84.0" mnemonicParsing="false" text="Casa" />
+                        <RadioButton fx:id="niño" layoutX="118.0" layoutY="134.0" mnemonicParsing="false" text="Niño" />
+                        <RadioButton fx:id="montaña" layoutX="118.0" layoutY="183.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="87.0" text="Montaña" />
+                        <Accordion />
+                        <RadioButton fx:id="paisaje" layoutX="118.0" layoutY="230.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="65.0" text="Paisaje" />
+                        <ImageView fx:id="viewImage" fitHeight="230.0" fitWidth="260.0" layoutX="348.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+      <ToolBar layoutX="313.0" layoutY="540.0" prefHeight="40.0" prefWidth="175.0">
+         <items>
+            <Label text="Inicio" />
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
+            <Button mnemonicParsing="false" onAction="#eventoSalir" text="Ayuda">
+         
+      </Button>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="2.0" />
+            <Button mnemonicParsing="false" onAction="#eventoSalir" text="SALIR">
+         
+      </Button>
+         </items>
+      </ToolBar>
+    </children>
+</AnchorPane>
