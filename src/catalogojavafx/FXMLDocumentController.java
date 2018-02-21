@@ -159,19 +159,18 @@ public class FXMLDocumentController implements Initializable {
             @Override
             public void changed(ObservableValue<? extends Toggle> observable, Toggle oldValue, Toggle newValue) {
                 if (casa.isSelected()) {
-                    viewImage.setImage(new Image(""));
+                    viewImage.setImage(new Image("casa.jpg"));
                 }
                 if (niño.isSelected()) {
-                    viewImage.setImage(new Image(""));
+                    viewImage.setImage(new Image("niño.jpg"));
                 }
                 if (montaña.isSelected()) {
-                    viewImage.setImage(new Image(""));
+                    viewImage.setImage(new Image("montaña.jpg"));
                 }
                 if (paisaje.isSelected()) {
-                    viewImage.setImage(new Image(""));
+                    viewImage.setImage(new Image("paisaje.jpg"));
                 }
             }
-            
         });
     }
 
